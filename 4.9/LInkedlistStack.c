@@ -1,4 +1,3 @@
-//2022110037 전민제
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct Node{

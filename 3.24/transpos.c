@@ -1,4 +1,3 @@
-//컴퓨터 학과 심컴 2022110037 전민제
 #include <stdio.h>
 #define max 100
 typedef struct{

@@ -1,4 +1,3 @@
-//2022110037 전민제
 #include <stdio.h>
 #include <time.h>
 #define MAX_SIZE 1001
