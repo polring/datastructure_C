@@ -1,3 +1,4 @@
+// 무식한 버전
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 100

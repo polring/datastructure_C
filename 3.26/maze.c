@@ -1,3 +1,4 @@
+// 최대한 효율성 생각하면서 구현 매개변수도 최소한으로 줄임
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 100
@@ -33,7 +34,7 @@ void push(Stack *s, element p) {
 }
 
 element pop(Stack *s) { return s->stack[s->top--]; }
-
+// 따로 배열을 사용하지 않고 방문한 곳은 -1로 표시
 int path(Maze *m, Stack *s, element start, element end) {
     int found = 0;
     element pos = {start.row + 1, start.col + 1, 0};
@@ -96,7 +97,7 @@ void print(Maze *m, Stack *s, element start, element end) {
             for (int j = 1; j <= m->cols; j++) {
                 if (i == start.row + 1 && j == start.col + 1) printf("S ");
                 else if (i == end.row + 1 && j == end.col + 1) printf("F ");
-                // stack에 남아 있는 좌표는 2로 표시
+                // stack에 남아 있는 좌표(탈출 경로)는 2로 표시
                 else if (m->maze[i][j] == 2) printf("X ");
                 //한번이라도 간 경우 -1로 표시
                 else if (m->maze[i][j] == -1) printf("0 ");
