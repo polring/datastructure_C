@@ -40,7 +40,7 @@ void inorder(node* root){
     inorder(root->right);
 }
 node* binarySearch(node* root, int target) {
-    if (root == NULL) return NULL;             // 탐색 실패
+    if (root == NULL) return NULL;             
     if (root->data.id == target) return root;     
 
     if (target < root->data.id)
