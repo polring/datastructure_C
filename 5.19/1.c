@@ -21,7 +21,7 @@ void setUnion(int *parent,int a,int b){
         parent[a] = b;
     }
 }
-
+// 크루스칼 알고리즘 실행
 void kruskal(int **arr,int n){
     int visited[MAX][MAX] = {0,};
     int *parent = malloc(sizeof(int)*n);

@@ -160,8 +160,8 @@ int main(){
     int x,y;
     int vertex,edge;
     fscanf(fp,"%d %d",&vertex,&edge);
-    node** head = malloc(sizeof(node*)*(vertex+1));
-    int *visit = malloc(sizeof(int)*(vertex+1));
+    node** head = calloc(vertex+1,sizeof(node*));
+    int *visit = calloc(vertex + 1,sizeof(int));
     for(int i=0;i<edge;i++){
         fscanf(fp,"%d %d",&x,&y);
         append(head+x,y);
